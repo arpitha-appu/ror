@@ -1,0 +1,692 @@
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMyModels (20230702131904)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "my_models" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "data" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230702131904"]]
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-07-02 13:20:48.485441"], ["updated_at", "2023-07-02 13:20:48.485441"]]
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/my_models" for ::1 at 2023-07-02 18:54:22 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/my_models"):
+  
+Started GET "/" for ::1 at 2023-07-02 18:54:48 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.0ms | Allocations: 303)
+Completed 200 OK in 63ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 3038)
+
+
+Started GET "/" for ::1 at 2023-07-02 19:06:38 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.5ms | Allocations: 553)
+Completed 200 OK in 75ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 4928)
+
+
+Started GET "/" for ::1 at 2023-07-02 19:07:36 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.3ms | Allocations: 296)
+Completed 200 OK in 14ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 1092)
+
+
+Started POST "/?name=appu&data=im%20a%20girl" for ::1 at 2023-07-02 19:08:42 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+Started POST "/?name=appu&data=im%20a%20girl" for ::1 at 2023-07-02 19:11:04 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant MymodelsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  MyModelsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started POST "/?name=appu&data=im%20a%20girl" for ::1 at 2023-07-02 19:13:26 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant MymodelsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  MyModelsController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started POST "/?name=appu&data=im%20a%20girl" for ::1 at 2023-07-02 19:14:17 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+LoadError (cannot load such file -- httparty):
+  
+app/controllers/my_models_controller.rb:1:in `<main>'
+Started POST "/?name=appu&data=im%20a%20girl" for ::1 at 2023-07-02 19:15:37 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+LoadError (cannot load such file -- httparty):
+  
+app/controllers/my_models_controller.rb:1:in `<main>'
+Started POST "/?name=appu&data=im%20a%20girl" for ::1 at 2023-07-02 19:17:23 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MyModelsController#create as */*
+  Parameters: {"name"=>"appu", "data"=>"im a girl"}
+Completed 400 Bad Request in 44ms (ActiveRecord: 0.0ms | Allocations: 2663)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: my_model):
+  
+app/controllers/my_models_controller.rb:31:in `my_model_params'
+app/controllers/my_models_controller.rb:7:in `create'
+Started POST "/" for ::1 at 2023-07-02 19:18:01 +0530
+Processing by MyModelsController#create as */*
+Completed 400 Bad Request in 6ms (ActiveRecord: 0.0ms | Allocations: 518)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: my_model):
+  
+app/controllers/my_models_controller.rb:31:in `my_model_params'
+app/controllers/my_models_controller.rb:7:in `create'
+Started POST "/new" for ::1 at 2023-07-02 19:19:19 +0530
+Processing by MyModelsController#create as */*
+Completed 400 Bad Request in 14ms (Allocations: 1202)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: my_model):
+  
+app/controllers/my_models_controller.rb:31:in `my_model_params'
+app/controllers/my_models_controller.rb:7:in `create'
+Started POST "/new" for ::1 at 2023-07-02 19:20:23 +0530
+Error occurred while parsing request parameters.
+Contents:
+
+{name: "appu",
+data: "Hiii"}
+Processing by MyModelsController#create as */*
+Completed 400 Bad Request in 9ms (Allocations: 719)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/my_models_controller.rb:31:in `my_model_params'
+app/controllers/my_models_controller.rb:7:in `create'
+Started POST "/new" for ::1 at 2023-07-02 19:21:02 +0530
+Processing by MyModelsController#create as */*
+Completed 400 Bad Request in 7ms (Allocations: 484)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: my_model):
+  
+app/controllers/my_models_controller.rb:31:in `my_model_params'
+app/controllers/my_models_controller.rb:7:in `create'
+Started POST "/new?name=appu&data=hii" for ::1 at 2023-07-02 19:23:10 +0530
+Processing by MyModelsController#create as */*
+  Parameters: {"name"=>"appu", "data"=>"hii"}
+Completed 400 Bad Request in 6ms (Allocations: 489)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: my_model):
+  
+app/controllers/my_models_controller.rb:31:in `my_model_params'
+app/controllers/my_models_controller.rb:7:in `create'
+Started POST "/new?name=%22appu%22&data=hii" for ::1 at 2023-07-02 19:23:37 +0530
+Processing by MyModelsController#create as */*
+  Parameters: {"name"=>"\"appu\"", "data"=>"hii"}
+Completed 400 Bad Request in 7ms (Allocations: 489)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: my_model):
+  
+app/controllers/my_models_controller.rb:31:in `my_model_params'
+app/controllers/my_models_controller.rb:7:in `create'
+Started POST "/new" for ::1 at 2023-07-02 19:26:51 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MyModelsController#create as */*
+Completed 400 Bad Request in 30ms (ActiveRecord: 0.0ms | Allocations: 2573)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: my_model):
+  
+app/controllers/my_models_controller.rb:31:in `my_model_params'
+app/controllers/my_models_controller.rb:7:in `create'
+Started POST "/" for ::1 at 2023-07-02 19:27:16 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+Started POST "/" for ::1 at 2023-07-02 19:27:33 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+Started POST "/new" for ::1 at 2023-07-02 19:27:45 +0530
+Processing by MyModelsController#create as */*
+  Parameters: {"my_model"=>{"name"=>"value1", "data"=>"value2"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mMyModel Create (4.9ms)[0m  [1m[32mINSERT INTO "my_models" ("name", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "value1"], ["data", "value2"], ["created_at", "2023-07-02 13:57:45.786774"], ["updated_at", "2023-07-02 13:57:45.786774"]]
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 265ms (ActiveRecord: 13.6ms | Allocations: 17478)
+
+
+  
+NameError (undefined local variable or method `data' for #<MyModelsController:0x0000000000b040>
+
+            body: data.to_json,
+                  ^^^^):
+  
+app/controllers/my_models_controller.rb:42:in `block in notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:37:in `each'
+app/controllers/my_models_controller.rb:37:in `notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:10:in `create'
+Started POST "/new" for ::1 at 2023-07-02 19:29:53 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MyModelsController#create as */*
+  Parameters: {"my_model"=>{"name"=>"value1", "data"=>"value2"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mMyModel Create (3.7ms)[0m  [1m[32mINSERT INTO "my_models" ("name", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "value1"], ["data", "value2"], ["created_at", "2023-07-02 13:59:54.211903"], ["updated_at", "2023-07-02 13:59:54.211903"]]
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 10.5ms | Allocations: 12667)
+
+
+  
+NameError (undefined local variable or method `data' for #<MyModelsController:0x0000000000a668>
+
+            body: data,
+                  ^^^^):
+  
+app/controllers/my_models_controller.rb:42:in `block in notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:37:in `each'
+app/controllers/my_models_controller.rb:37:in `notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:10:in `create'
+Started POST "/new" for ::1 at 2023-07-02 19:32:58 +0530
+Processing by MyModelsController#create as */*
+  Parameters: {"my_model"=>{"name"=>"value1", "data"=>"value2"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mMyModel Create (2.9ms)[0m  [1m[32mINSERT INTO "my_models" ("name", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "value1"], ["data", "value2"], ["created_at", "2023-07-02 14:03:02.874515"], ["updated_at", "2023-07-02 14:03:02.874515"]]
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 9.9ms | Allocations: 7560)
+
+
+  
+NameError (undefined local variable or method `data' for #<MyModelsController:0x0000000000e2e0>
+
+            body: data.to_json,
+                  ^^^^):
+  
+app/controllers/my_models_controller.rb:42:in `block in notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:37:in `each'
+app/controllers/my_models_controller.rb:37:in `notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:10:in `create'
+Started POST "/new" for ::1 at 2023-07-02 19:33:37 +0530
+Processing by MyModelsController#create as */*
+  Parameters: {"name"=>"value1", "data"=>"value2", "my_model"=>{"name"=>"value1", "data"=>"value2"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mMyModel Create (5.1ms)[0m  [1m[32mINSERT INTO "my_models" ("name", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "value1"], ["data", "value2"], ["created_at", "2023-07-02 14:03:37.573160"], ["updated_at", "2023-07-02 14:03:37.573160"]]
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 9.6ms | Allocations: 5283)
+
+
+  
+NameError (undefined local variable or method `data' for #<MyModelsController:0x0000000000e650>
+
+            body: data.to_json,
+                  ^^^^):
+  
+app/controllers/my_models_controller.rb:42:in `block in notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:37:in `each'
+app/controllers/my_models_controller.rb:37:in `notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:10:in `create'
+Started POST "/new" for ::1 at 2023-07-02 19:33:59 +0530
+Processing by MyModelsController#create as */*
+Completed 400 Bad Request in 6ms (ActiveRecord: 0.0ms | Allocations: 505)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: my_model):
+  
+app/controllers/my_models_controller.rb:31:in `my_model_params'
+app/controllers/my_models_controller.rb:7:in `create'
+Started POST "/new" for ::1 at 2023-07-02 19:34:35 +0530
+Processing by MyModelsController#create as */*
+  Parameters: {"name"=>"appu", "data"=>"hii"}
+Completed 400 Bad Request in 6ms (ActiveRecord: 0.0ms | Allocations: 505)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: my_model):
+  
+app/controllers/my_models_controller.rb:31:in `my_model_params'
+app/controllers/my_models_controller.rb:7:in `create'
+Started POST "/new" for ::1 at 2023-07-02 19:36:23 +0530
+Processing by MyModelsController#create as */*
+  Parameters: {"my_model"=>{"param1"=>"value1", "param2"=>"value2", "param3"=>"value3"}}
+[31mUnpermitted parameters: :param1, :param2, :param3. Context: { controller: MyModelsController, action: create, request: #<ActionDispatch::Request:0x000001eeec5665d0>, params: {"my_model"=>{"param1"=>"value1", "param2"=>"value2", "param3"=>"value3"}, "controller"=>"my_models", "action"=>"create"} }[0m
+Completed 422 Unprocessable Entity in 9ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 1785)
+
+
+Started POST "/new" for ::1 at 2023-07-02 19:36:51 +0530
+Processing by MyModelsController#create as */*
+  Parameters: {"my_model"=>{"param1"=>"value1", "param2"=>"value2"}}
+[31mUnpermitted parameters: :param1, :param2. Context: { controller: MyModelsController, action: create, request: #<ActionDispatch::Request:0x000001eeec6a14e0>, params: {"my_model"=>{"param1"=>"value1", "param2"=>"value2"}, "controller"=>"my_models", "action"=>"create"} }[0m
+Completed 422 Unprocessable Entity in 7ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 1219)
+
+
+Started POST "/new" for ::1 at 2023-07-02 19:37:25 +0530
+Processing by MyModelsController#create as */*
+  Parameters: {"my_model"=>{"name"=>"value1", "data"=>"value2"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mMyModel Create (5.3ms)[0m  [1m[32mINSERT INTO "my_models" ("name", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "value1"], ["data", "value2"], ["created_at", "2023-07-02 14:07:25.553431"], ["updated_at", "2023-07-02 14:07:25.553431"]]
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 11.9ms | Allocations: 5385)
+
+
+  
+NameError (undefined local variable or method `data' for #<MyModelsController:0x0000000000f118>
+
+            body: data.to_json,
+                  ^^^^):
+  
+app/controllers/my_models_controller.rb:42:in `block in notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:37:in `each'
+app/controllers/my_models_controller.rb:37:in `notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:10:in `create'
+Started POST "/new" for ::1 at 2023-07-02 19:40:23 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MyModelsController#create as */*
+  Parameters: {"my_model"=>{"name"=>"value1", "data"=>"value2"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mMyModel Create (1.7ms)[0m  [1m[32mINSERT INTO "my_models" ("name", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "value1"], ["data", "value2"], ["created_at", "2023-07-02 14:10:24.125426"], ["updated_at", "2023-07-02 14:10:24.125426"]]
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 8.8ms | Allocations: 9802)
+
+
+  
+ArgumentError (bad argument (expected URI object or URI string)):
+  
+app/controllers/my_models_controller.rb:40:in `block in notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:37:in `each'
+app/controllers/my_models_controller.rb:37:in `notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:10:in `create'
+Started POST "/new" for ::1 at 2023-07-02 19:43:31 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MyModelsController#create as */*
+  Parameters: {"my_model"=>{"name"=>"value1", "data"=>"value2"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mMyModel Create (3.7ms)[0m  [1m[32mINSERT INTO "my_models" ("name", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "value1"], ["data", "value2"], ["created_at", "2023-07-02 14:13:32.058438"], ["updated_at", "2023-07-02 14:13:32.058438"]]
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 10.2ms | Allocations: 10805)
+
+
+  
+NoMethodError (undefined method `log' for nil:NilClass
+
+        console.log(endpoint)
+               ^^^^):
+  
+app/controllers/my_models_controller.rb:38:in `block in notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:37:in `each'
+app/controllers/my_models_controller.rb:37:in `notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:10:in `create'
+Started POST "/new" for ::1 at 2023-07-02 19:44:14 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MyModelsController#create as */*
+  Parameters: {"my_model"=>{"name"=>"value1", "data"=>"value2"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mMyModel Create (1.6ms)[0m  [1m[32mINSERT INTO "my_models" ("name", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "value1"], ["data", "value2"], ["created_at", "2023-07-02 14:14:15.352801"], ["updated_at", "2023-07-02 14:14:15.352801"]]
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 8.2ms | Allocations: 9811)
+
+
+  
+ArgumentError (bad argument (expected URI object or URI string)):
+  
+app/controllers/my_models_controller.rb:41:in `block in notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:37:in `each'
+app/controllers/my_models_controller.rb:37:in `notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:10:in `create'
+Started POST "/new" for ::1 at 2023-07-02 19:45:06 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MyModelsController#create as */*
+  Parameters: {"my_model"=>{"name"=>"value1", "data"=>"value2"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mMyModel Create (5.5ms)[0m  [1m[32mINSERT INTO "my_models" ("name", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "value1"], ["data", "value2"], ["created_at", "2023-07-02 14:15:07.726089"], ["updated_at", "2023-07-02 14:15:07.726089"]]
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 11.4ms | Allocations: 9586)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/my_models_controller.rb:42:in `[]'
+app/controllers/my_models_controller.rb:42:in `block in notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:37:in `each'
+app/controllers/my_models_controller.rb:37:in `notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:10:in `create'
+Started POST "/new" for ::1 at 2023-07-02 19:47:46 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MyModelsController#create as */*
+  Parameters: {"my_model"=>{"name"=>"value1", "data"=>"value2"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mMyModel Create (5.0ms)[0m  [1m[32mINSERT INTO "my_models" ("name", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "value1"], ["data", "value2"], ["created_at", "2023-07-02 14:17:46.945931"], ["updated_at", "2023-07-02 14:17:46.945931"]]
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 12.1ms | Allocations: 9575)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/my_models_controller.rb:38:in `[]'
+app/controllers/my_models_controller.rb:38:in `block in notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:37:in `each'
+app/controllers/my_models_controller.rb:37:in `notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:10:in `create'
+Started POST "/new" for ::1 at 2023-07-02 19:49:40 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MyModelsController#create as */*
+  Parameters: {"my_model"=>{"name"=>"value1", "data"=>"value2"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mMyModel Create (3.7ms)[0m  [1m[32mINSERT INTO "my_models" ("name", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "value1"], ["data", "value2"], ["created_at", "2023-07-02 14:19:41.404569"], ["updated_at", "2023-07-02 14:19:41.404569"]]
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 9.6ms | Allocations: 9577)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/my_models_controller.rb:42:in `[]'
+app/controllers/my_models_controller.rb:42:in `block in notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:37:in `each'
+app/controllers/my_models_controller.rb:37:in `notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:10:in `create'
+Started POST "/new" for ::1 at 2023-07-02 19:51:00 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MyModelsController#create as */*
+  Parameters: {"my_model"=>{"name"=>"value1", "data"=>"value2"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mMyModel Create (3.6ms)[0m  [1m[32mINSERT INTO "my_models" ("name", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "value1"], ["data", "value2"], ["created_at", "2023-07-02 14:21:01.510507"], ["updated_at", "2023-07-02 14:21:01.510507"]]
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 9.3ms | Allocations: 12464)
+
+
+  
+NoMethodError (undefined method `type' for #<MyModelsController:0x0000000000a668>
+
+        puts(type(endpoint))
+             ^^^^):
+  
+app/controllers/my_models_controller.rb:38:in `block in notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:37:in `each'
+app/controllers/my_models_controller.rb:37:in `notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:10:in `create'
+Started POST "/new" for ::1 at 2023-07-02 19:52:04 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MyModelsController#create as */*
+  Parameters: {"my_model"=>{"name"=>"value1", "data"=>"value2"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mMyModel Create (5.8ms)[0m  [1m[32mINSERT INTO "my_models" ("name", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "value1"], ["data", "value2"], ["created_at", "2023-07-02 14:22:05.266670"], ["updated_at", "2023-07-02 14:22:05.266670"]]
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 15.6ms | Allocations: 9582)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/my_models_controller.rb:42:in `[]'
+app/controllers/my_models_controller.rb:42:in `block in notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:37:in `each'
+app/controllers/my_models_controller.rb:37:in `notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:10:in `create'
+Started POST "/new" for ::1 at 2023-07-02 19:54:31 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MyModelsController#create as */*
+  Parameters: {"my_model"=>{"name"=>"value1", "data"=>"value2"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mMyModel Create (2.0ms)[0m  [1m[32mINSERT INTO "my_models" ("name", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "value1"], ["data", "value2"], ["created_at", "2023-07-02 14:24:32.360243"], ["updated_at", "2023-07-02 14:24:32.360243"]]
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 10.8ms | Allocations: 9576)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/my_models_controller.rb:42:in `[]'
+app/controllers/my_models_controller.rb:42:in `block in notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:37:in `each'
+app/controllers/my_models_controller.rb:37:in `notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:10:in `create'
+Started POST "/new" for ::1 at 2023-07-02 19:57:10 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MyModelsController#create as */*
+  Parameters: {"my_model"=>{"name"=>"value1", "data"=>"value2"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mMyModel Create (3.0ms)[0m  [1m[32mINSERT INTO "my_models" ("name", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "value1"], ["data", "value2"], ["created_at", "2023-07-02 14:27:11.033849"], ["updated_at", "2023-07-02 14:27:11.033849"]]
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 8.9ms | Allocations: 9574)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/my_models_controller.rb:42:in `[]'
+app/controllers/my_models_controller.rb:42:in `block in notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:37:in `each'
+app/controllers/my_models_controller.rb:37:in `notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:10:in `create'
+Started POST "/new" for ::1 at 2023-07-02 19:58:08 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MyModelsController#create as */*
+  Parameters: {"my_model"=>{"name"=>"value1", "data"=>"value2"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mMyModel Create (1.7ms)[0m  [1m[32mINSERT INTO "my_models" ("name", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "value1"], ["data", "value2"], ["created_at", "2023-07-02 14:28:09.149158"], ["updated_at", "2023-07-02 14:28:09.149158"]]
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 8.5ms | Allocations: 9585)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/my_models_controller.rb:42:in `[]'
+app/controllers/my_models_controller.rb:42:in `block in notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:37:in `each'
+app/controllers/my_models_controller.rb:37:in `notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:10:in `create'
+Started POST "/new" for ::1 at 2023-07-02 19:58:52 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MyModelsController#create as */*
+  Parameters: {"my_model"=>{"name"=>"value1", "data"=>"value2"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mMyModel Create (6.6ms)[0m  [1m[32mINSERT INTO "my_models" ("name", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "value1"], ["data", "value2"], ["created_at", "2023-07-02 14:28:53.456126"], ["updated_at", "2023-07-02 14:28:53.456126"]]
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (6.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 14.6ms | Allocations: 9585)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/my_models_controller.rb:42:in `[]'
+app/controllers/my_models_controller.rb:42:in `block in notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:37:in `each'
+app/controllers/my_models_controller.rb:37:in `notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:10:in `create'
+Started POST "/new" for ::1 at 2023-07-02 19:59:51 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MyModelsController#create as */*
+  Parameters: {"my_model"=>{"name"=>"value1", "data"=>"value2"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mMyModel Create (4.2ms)[0m  [1m[32mINSERT INTO "my_models" ("name", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "value1"], ["data", "value2"], ["created_at", "2023-07-02 14:29:52.449117"], ["updated_at", "2023-07-02 14:29:52.449117"]]
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (6.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 12.5ms | Allocations: 9726)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/my_models_controller.rb:46:in `[]'
+app/controllers/my_models_controller.rb:46:in `block in notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:37:in `each'
+app/controllers/my_models_controller.rb:37:in `notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:10:in `create'
+Started POST "/new" for ::1 at 2023-07-02 20:01:07 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MyModelsController#create as */*
+  Parameters: {"my_model"=>{"name"=>"value1", "data"=>"value2"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mMyModel Create (3.5ms)[0m  [1m[32mINSERT INTO "my_models" ("name", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "value1"], ["data", "value2"], ["created_at", "2023-07-02 14:31:07.936647"], ["updated_at", "2023-07-02 14:31:07.936647"]]
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 60082ms (ActiveRecord: 9.1ms | Allocations: 11049)
+
+
+  
+Net::ReadTimeout (Net::ReadTimeout with #<Socket:(closed)>):
+  
+app/controllers/my_models_controller.rb:41:in `block in notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:37:in `each'
+app/controllers/my_models_controller.rb:37:in `notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:10:in `create'
+Started POST "/webhooks/endpoint1" for ::1 at 2023-07-02 20:02:08 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/webhooks/endpoint1"):
+  
+Started POST "/new" for ::1 at 2023-07-02 20:02:58 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MyModelsController#create as */*
+  Parameters: {"my_model"=>{"name"=>"value1", "data"=>"value2"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mMyModel Create (3.6ms)[0m  [1m[32mINSERT INTO "my_models" ("name", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "value1"], ["data", "value2"], ["created_at", "2023-07-02 14:32:59.146729"], ["updated_at", "2023-07-02 14:32:59.146729"]]
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 60074ms (ActiveRecord: 11.4ms | Allocations: 11058)
+
+
+  
+Net::ReadTimeout (Net::ReadTimeout with #<Socket:(closed)>):
+  
+app/controllers/my_models_controller.rb:41:in `block in notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:37:in `each'
+app/controllers/my_models_controller.rb:37:in `notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:10:in `create'
+Started POST "/webhooks/endpoint1" for ::1 at 2023-07-02 20:04:00 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/webhooks/endpoint1"):
+  
+Started POST "/new" for ::1 at 2023-07-02 20:05:34 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MyModelsController#create as */*
+  Parameters: {"my_model"=>{"name"=>"value1", "data"=>"value2"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mMyModel Create (3.8ms)[0m  [1m[32mINSERT INTO "my_models" ("name", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "value1"], ["data", "value2"], ["created_at", "2023-07-02 14:35:35.127892"], ["updated_at", "2023-07-02 14:35:35.127892"]]
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 10.4ms | Allocations: 9573)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/my_models_controller.rb:38:in `[]'
+app/controllers/my_models_controller.rb:38:in `block in notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:37:in `each'
+app/controllers/my_models_controller.rb:37:in `notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:10:in `create'
+Started POST "/new" for ::1 at 2023-07-02 20:07:00 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MyModelsController#create as */*
+  Parameters: {"my_model"=>{"name"=>"value1", "data"=>"value2"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mMyModel Create (4.9ms)[0m  [1m[32mINSERT INTO "my_models" ("name", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "value1"], ["data", "value2"], ["created_at", "2023-07-02 14:37:01.177060"], ["updated_at", "2023-07-02 14:37:01.177060"]]
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/my_models_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 60084ms (ActiveRecord: 11.9ms | Allocations: 11054)
+
+
+  
+Net::ReadTimeout (Net::ReadTimeout with #<Socket:(closed)>):
+  
+app/controllers/my_models_controller.rb:41:in `block in notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:37:in `each'
+app/controllers/my_models_controller.rb:37:in `notify_third_party_endpoints'
+app/controllers/my_models_controller.rb:10:in `create'
+Started POST "/webhooks/endpoint1" for ::1 at 2023-07-02 20:08:02 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/webhooks/endpoint1"):
+  

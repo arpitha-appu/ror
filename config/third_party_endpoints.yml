@@ -1,0 +1,15 @@
+development:
+  endpoint1:
+    url: 'http://localhost:3000/webhooks/endpoint1'
+    token: 'SOME_SECRET_TOKEN_1'
+  endpoint2:
+    url: 'http://localhost:3000/webhooks/endpoint2'
+    token: 'SOME_SECRET_TOKEN_2'
+
+production:
+  endpoint1:
+    url: 'https://example.com/webhooks/endpoint1'
+    token: 'SOME_SECRET_TOKEN_1'
+  endpoint2:
+    url: 'https://example.com/webhooks/endpoint2'
+    token: 'SOME_SECRET_TOKEN_2'
