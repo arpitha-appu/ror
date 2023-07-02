@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   post '/new', to: 'my_models#create'
-  post '/update', to: 'my_models#update'
+  put '/update/:id', to: 'my_models#update'
 
 end
